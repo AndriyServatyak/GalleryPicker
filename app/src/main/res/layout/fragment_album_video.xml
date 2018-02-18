@@ -1,0 +1,12 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.geekapps.andrii.gallerypicker.fragment.albumvideofragment.AlbumVideoFragment">
+
+    <com.geekapps.andrii.gallerypicker.view.PlaceholderRecyclerView
+        android:id="@+id/video_album_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

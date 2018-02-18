@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Dialog Fragment Picker-->
+    <dimen name="fragment_picker_buttons_container_padding_top">8dp</dimen>
+    <dimen name="fragment_picker_buttons_container_padding_bottom">8dp</dimen>
+    <dimen name="fragment_picker_root_min_height">250dp</dimen>
+
+    <!--Item Album-->
+    <dimen name="item_album_title_margin_bottom">8dp</dimen>
+    <dimen name="item_album_title_margin_start">16dp</dimen>
+    <dimen name="item_album_title_margin_top">8dp</dimen>
+    <dimen name="item_album_title_text_size">13sp</dimen>
+    <dimen name="item_album_number_margin_bottom">8dp</dimen>
+    <dimen name="item_album_number_margin_end">16dp</dimen>
+    <dimen name="item_album_number_margin_top">8dp</dimen>
+    <dimen name="item_album_number_text_size">13sp</dimen>
+    <dimen name="item_album_root_padding">3dp</dimen>
+    <dimen name="item_album_preview_height">150dp</dimen>
+
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/fragment_picker_buttons_container_padding_bottom"
+        android:paddingTop="@dimen/fragment_picker_buttons_container_padding_top">
+
+        <TextView
+            android:id="@+id/chose_image_tv"
+            style="@style/PickerRoundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image" />
+
+        <TextView
+            android:id="@+id/chose_video_tv"
+            style="@style/PickerRoundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/video" />
+
+        <TextView
+            android:id="@+id/chose_file_tv"
+            style="@style/PickerRoundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/file" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <com.geekapps.andrii.gallerypicker.view.PlaceholderRecyclerView
+        android:id="@+id/image_video_picked_values_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.geekapps.andrii.gallerypicker.view.PlaceholderRecyclerView
+        android:id="@+id/files_picked_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
