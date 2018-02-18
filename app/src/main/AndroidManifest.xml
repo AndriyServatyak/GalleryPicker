@@ -11,17 +11,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.MainActivity">
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.gallery.GalleryActivity" />
-        <activity android:name=".activity.fullscreen.ImageFullScreenActivity" />
-        <activity android:name=".activity.fullscreen.VideoFullScreenActivity" />
-        <activity android:name=".activity.filepicker.FilePickerActivity"></activity>
+        <activity
+            android:name=".activity.gallery.GalleryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.fullscreen.ImageFullScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.fullscreen.VideoFullScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.filepicker.FilePickerActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
