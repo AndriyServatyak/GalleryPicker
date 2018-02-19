@@ -14,8 +14,74 @@
     <dimen name="item_album_number_margin_bottom">8dp</dimen>
     <dimen name="item_album_number_margin_end">16dp</dimen>
     <dimen name="item_album_number_margin_top">8dp</dimen>
+    <dimen name="item_album_title_margin_margin_end">8dp</dimen>
     <dimen name="item_album_number_text_size">13sp</dimen>
     <dimen name="item_album_root_padding">3dp</dimen>
     <dimen name="item_album_preview_height">150dp</dimen>
+
+    <!--Activity File Picker-->
+    <dimen name="activity_file_picker_fab_margin">16dp</dimen>
+
+    <!--Exo playback control-->
+    <dimen name="exo_playback_button_container_padding_top">4dp</dimen>
+    <dimen name="exo_playback_time_container_margin_top">4dp</dimen>
+    <dimen name="exo_playback_position_paddong_left">4dp</dimen>
+    <dimen name="exo_playback_position_padding_right">4dp</dimen>
+    <dimen name="exo_playback_position_text_size">14sp</dimen>
+    <dimen name="exo_playback_timer_height">26dp</dimen>
+    <dimen name="exo_playback_duration_padding_start">4dp</dimen>
+    <dimen name="exo_playback_duration_padding_end">4dp</dimen>
+    <dimen name="exo_playback_duration_text_size">14sp</dimen>
+
+    <!--Item Default Directory-->
+    <dimen name="item_default_directory_dots_margin_start">8dp</dimen>
+    <dimen name="item_default_directory_dots_text_size">16sp</dimen>
+    <dimen name="item_default_directory_root_padding">8dp</dimen>
+
+    <!--Item File-->
+    <dimen name="item_file_image_margin_start">8dp</dimen>
+    <dimen name="item_file_image_margin_top">8dp</dimen>
+    <dimen name="item_file_name_margin_bottom">8dp</dimen>
+    <dimen name="item_file_name_margin_end">8dp</dimen>
+    <dimen name="item_file_name_margin_start">8dp</dimen>
+    <dimen name="item_file_name_margin_top">8dp</dimen>
+    <dimen name="item_file_name_text_size">16sp</dimen>
+    <dimen name="item_file_checkbox_margin_bottom">8dp</dimen>
+    <dimen name="item_file_checkbox_margin_top">8dp</dimen>
+    <dimen name="item_file_date_margin_start">44dp</dimen>
+    <dimen name="item_file_date_text_size">12sp</dimen>
+
+    <!--Item Image-->
+    <dimen name="item_image_root_height">100dp</dimen>
+    <dimen name="item_image_select_margin">3dp</dimen>
+
+    <!--Item Selected File-->
+    <dimen name="item_selected_file_image_margin_bottom">8dp</dimen>
+    <dimen name="item_selected_file_image_margin_start">8dp</dimen>
+    <dimen name="item_selected_file_image_margin_top">8dp</dimen>
+    <dimen name="item_selected_file_name_margin_bottom">8dp</dimen>
+    <dimen name="item_selected_file_name_margin_end">8dp</dimen>
+    <dimen name="item_selected_file_name_margin_start">8dp</dimen>
+    <dimen name="item_selected_file_name_margin_top">8dp</dimen>
+    <dimen name="item_selected_file_name_text_size">16sp</dimen>
+    <dimen name="item_selected_file_delete_margin_bottom">8dp</dimen>
+    <dimen name="item_selected_file_delete_margin_top">8dp</dimen>
+
+    <!--Item Video-->
+    <dimen name="item_video_root_height">100dp</dimen>
+    <dimen name="item_video_indicator_margin">3dp</dimen>
+
+    <!--Counter Toolbar-->
+    <dimen name="counter_toolbar_title_margin_end">8dp</dimen>
+    <dimen name="counter_toolbar_title_margin_start">16dp</dimen>
+    <dimen name="counter_toolbar_title_text_size">18sp</dimen>
+    <dimen name="counter_toolbar_margin_bottom">8dp</dimen>
+    <dimen name="counter_toolbar_margin_end">16dp</dimen>
+    <dimen name="counter_toolbar_margin_top">8dp</dimen>
+
+    <!--Picker Toolbar-->
+    <dimen name="picker_toolbar_margin_start">16dp</dimen>
+    <dimen name="picker_toolbar_title_text_size">18sp</dimen>
+
 
 </resources>

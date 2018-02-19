@@ -22,7 +22,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/item_album_title_margin_bottom"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="@dimen/item_album_title_margin_margin_end"
             android:layout_marginStart="@dimen/item_album_title_margin_start"
             android:layout_marginTop="@dimen/item_album_title_margin_top"
             android:textColor="@android:color/white"

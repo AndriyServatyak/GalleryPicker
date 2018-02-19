@@ -6,8 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.geekapps.andrii.gallerypicker.R;
+import com.geekapps.andrii.gallerypicker.model.DefaultFile;
+import com.geekapps.andrii.gallerypicker.model.eventbus.OnDefaultFolderClickedEvent;
 import com.geekapps.andrii.gallerypicker.model.eventbus.OnFileSelectEvent;
 import com.geekapps.andrii.gallerypicker.model.eventbus.OnFolderClickedEvent;
+import com.geekapps.andrii.gallerypicker.recycler.viewholder.ItemDefaultFolderViewHolder;
 import com.geekapps.andrii.gallerypicker.recycler.viewholder.ItemFileViewHolder;
 import com.geekapps.andrii.gallerypicker.recycler.viewholder.ItemFolderViewHolder;
 import com.geekapps.andrii.gallerypicker.util.Utils;
@@ -22,6 +25,7 @@ public class FileListRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.V
 
     private static final int FOLDER_VIEW_TYPE = 0;
     private static final int FILE_VIEW_TYPE = 1;
+    private static final int DEFAULT_FOLDER_TYPE = 2;
 
     private final List<File> mFiles;
     private final List<File> mPreviousClickedFolders;
@@ -36,6 +40,7 @@ public class FileListRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.V
     public void addAll(List<File> files) {
         mFiles.clear();
         mFiles.addAll(files);
+        mFiles.add(0, new DefaultFile(""));
         notifyDataSetChanged();
     }
 
@@ -72,6 +77,11 @@ public class FileListRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.V
                         .inflate(R.layout.item_file, parent, false);
                 return new ItemFileViewHolder(itemView);
             }
+            case DEFAULT_FOLDER_TYPE:
+                View itemView = LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.item_default_directory, parent, false);
+                return new ItemDefaultFolderViewHolder(itemView);
+
         }
         throw new NullPointerException("View type doesn't exist");
     }
@@ -83,6 +93,8 @@ public class FileListRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.V
             ((ItemFolderViewHolder) holder).bind(file, getListener());
         } else if (holder instanceof ItemFileViewHolder) {
             ((ItemFileViewHolder) holder).bind(file, getListener(), isSelected(file));
+        } else if (holder instanceof ItemDefaultFolderViewHolder) {
+            ((ItemDefaultFolderViewHolder) holder).bind(getListener());
         }
     }
 
@@ -93,7 +105,9 @@ public class FileListRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.V
     @Override
     public int getItemViewType(int position) {
         File file = mFiles.get(position);
-        if (file.isDirectory()) {
+        if (file instanceof DefaultFile) {
+            return DEFAULT_FOLDER_TYPE;
+        } else if (file.isDirectory()) {
             return FOLDER_VIEW_TYPE;
         } else {
             return FILE_VIEW_TYPE;
@@ -117,6 +131,11 @@ public class FileListRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.V
             public void onFileClicked(File file, boolean isSelected) {
                 addOrRemoveFile(file, isSelected);
             }
+
+            @Override
+            public void onDefaultFileClicked() {
+                EventBus.getDefault().post(new OnDefaultFolderClickedEvent());
+            }
         };
     }
 
@@ -133,5 +152,7 @@ public class FileListRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.V
         void onFolderClicked(File file);
 
         void onFileClicked(File file, boolean isSelected);
+
+        void onDefaultFileClicked();
     }
 }

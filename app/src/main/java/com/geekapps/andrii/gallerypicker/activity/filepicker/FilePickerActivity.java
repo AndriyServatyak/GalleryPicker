@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.geekapps.andrii.gallerypicker.R;
+import com.geekapps.andrii.gallerypicker.model.eventbus.OnDefaultFolderClickedEvent;
 import com.geekapps.andrii.gallerypicker.model.eventbus.OnFileSelectEvent;
 import com.geekapps.andrii.gallerypicker.model.eventbus.OnFolderClickedEvent;
 import com.geekapps.andrii.gallerypicker.picker.PickerDialogFragment;
@@ -84,6 +85,11 @@ public class FilePickerActivity extends AppCompatActivity implements FilePickerC
         File file = event.getFile();
         setupTitle(file);
         mPresenter.getDirectories(file.getPath());
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onDefaultFolderClickedEvent(OnDefaultFolderClickedEvent event) {
+        onBackPressed();
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
